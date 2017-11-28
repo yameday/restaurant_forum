@@ -1,4 +1,4 @@
-f @restaurant.errors.any? %>
+<% if @restaurant.errors.any? %>
   <h2>We have some errors here !</h2>
   <ul>
     <% @restaurant.errors.full_messages.each do |msg| %>
