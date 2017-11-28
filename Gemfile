@@ -38,6 +38,8 @@ gem 'carrierwave'
 # Use jquery for rails
 gem 'jquery-rails'
 
+gem 'devise'
+
 group :production do
   gem 'pg'
 end
