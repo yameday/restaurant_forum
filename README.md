@@ -2,6 +2,8 @@
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
+v0.1.0
+
 ### What is this repository for? ###
 
 * Quick summary
