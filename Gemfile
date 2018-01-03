@@ -40,6 +40,10 @@ gem 'jquery-rails'
 
 gem 'devise'
 
+gem 'ffaker'
+
+gem 'kaminari'
+
 group :production do
   gem 'pg'
 end
