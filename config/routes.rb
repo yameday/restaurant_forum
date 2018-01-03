@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :restaurants
+    resources :categories   # 請加入此行
     root "restaurants#index"
   end
 
