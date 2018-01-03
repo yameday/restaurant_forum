@@ -8,6 +8,8 @@
 <% end %>
 
 <%= form_for  [:admin, @restaurant] do |f| %>
+  <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: true}, {class: "form-control"} %>
+    
   <%= f.label :name, "Name" %>
   <%= f.text_field :name %>
   
