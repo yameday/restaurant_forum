@@ -9,4 +9,18 @@ Rails.application.routes.draw do
     root "restaurants#index"
   end
 
+  resources :restaurants, only: [:index, :show] do
+    resources :comments, only: [:create, :destroy]
+
+    # 瀏覽所有餐廳的最新動態
+    collection do
+      get :feeds
+    end
+
+    # 瀏覽個別餐廳的 Dashboard
+    member do
+      get :dashboard
+    end
+  end
+  
 end
