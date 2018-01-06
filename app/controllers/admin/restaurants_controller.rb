@@ -1,9 +1,8 @@
-class Admin::RestaurantsController < ApplicationController
-  before_action :authenticate_user!
-  before_action :authenticate_admin
+class Admin::RestaurantsController < Admin::BaseController
   
+ 
   def index
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.page(params[:page]).per(10)
   end
 
   def new
@@ -48,7 +47,7 @@ class Admin::RestaurantsController < ApplicationController
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :opening_hours, :tel, :address, :description, :image)
+    params.require(:restaurant).permit(:name, :opening_hours, :tel, :address, :description, :image, :category_id)
   end
   
   def set_restaurant
