@@ -8,6 +8,7 @@
         <p class="label label-default"><%= restaurant.category.name %><p>
         <p><%= truncate(restaurant.description, length: 80) %></p>
       </div>
+      <%= render partial: "shared/favorite", locals: {restaurant: restaurant} %>
     </div>
   </div>
 <% end %>
@@ -16,3 +17,5 @@
 <div class="text-center">
   <%= paginate @restaurants %>
 </div>
+
+
