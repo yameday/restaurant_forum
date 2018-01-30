@@ -16,6 +16,10 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :favorited_restaurants, through: :favorites, source: :restaurant
   
+
+  has_many :followships, dependent: :destroy
+  has_many :followings, through: :followships
+  
   def admin?
     self.role == "admin"
   end
