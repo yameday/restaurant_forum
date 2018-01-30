@@ -45,7 +45,7 @@
     <% @restaurant.comments.each do |comment| %>
       <div>
         <h4>
-          <%= comment.user.email.split('@').first %>
+          <%= comment.user.name %>
         </h4>
         <p>
           <%= simple_format comment.content %>
