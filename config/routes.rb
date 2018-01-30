@@ -8,11 +8,11 @@ Rails.application.routes.draw do
     resources :categories   # 請加入此行
     root "restaurants#index"
   end
-
+  
   resources :restaurants, only: [:index, :show] do
     resources :comments, only: [:create, :destroy]
 
-    resources :users, only: [:show, :edit, :update]
+    
     
     # 瀏覽所有餐廳的最新動態
     collection do
@@ -26,7 +26,7 @@ Rails.application.routes.draw do
       post :unfavorite
     end
   end
-  
+  resources :users, only: [:index, :show, :edit, :update]
   resources :categories, only: :show
 
   
