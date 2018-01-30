@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:index, :show, :edit, :update]
   resources :categories, only: :show
-
+  
+  resources :followships, only: [:create, :destroy]
   
 end
