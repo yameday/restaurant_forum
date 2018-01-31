@@ -1,31 +1,20 @@
-# README #
+# README
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## Usage
 
-v0.1.0
+### Heroku
+- 後台入口：https://ac-restaurant-forum-yameday.herokuapp.com/
+- 可使用 root@example.com 登入，密碼 12345678
 
-### What is this repository for? ###
+### Git Clone Step
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+```
+$ git clone https://github.com/yameday/restaurant_forum.git
+$ bundle install
+$ rails db:migrate
+$ rails db:seed
+$ rails dev:fake_restaurant
+$ rails dev:fake_user
+$ rails dev:fake_comment
+```
 
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
